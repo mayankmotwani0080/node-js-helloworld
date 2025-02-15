@@ -14,10 +14,10 @@ jobs:
         
       - name: Set up SSH key
         run: |
-           echo "$EC2_KEY" | sed 's/\\n/\n/g' > /Users/apple/Downloads/dev-1.pem
-           chmod 600 /Users/apple/Downloads/dev-1.pem
-           ls -l /Users/apple/Downloads/dev-1.pem   # Debug: Check if file exists
-           head -n 5 /Users/apple/Downloads/dev-1.pem   # Debug: Print first 5 lines
+           echo "$EC2_KEY" | sed 's/\\n/\n/g' > dev-1.pem
+           chmod 600 dev-1.pem
+           ls -l dev-1.pem   # Debug: Check if file exists
+           head -n 5 dev-1.pem   # Debug: Print first 5 lines
 
        
       - name: Deploy to EC2
